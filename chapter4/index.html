@@ -9,8 +9,6 @@
       
       
       
-        <link rel="prev" href="..">
-      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +16,7 @@
     
     
       
-        <title>Introduction - My Crypto Book</title>
+        <title>Chapter 4: Hash Functions and Digital Signatures - My Crypto Book</title>
       
     
     
@@ -60,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-introduction-to-cryptography" class="md-skip">
+        <a href="#chapter-4-hash-functions-and-digital-signatures" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Chapter 4: Hash Functions and Digital Signatures
             
           </span>
         </div>
@@ -190,11 +188,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../chapter1/" class="md-tabs__link">
         
   
     
@@ -313,31 +309,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../chapter1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -347,53 +322,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-cryptography" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Cryptography?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goals-of-cryptography" class="md-nav__link">
-    <span class="md-ellipsis">
-      Goals of Cryptography
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-cryptography" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of Cryptography
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -530,21 +458,31 @@
   
 
 
-<h1 id="chapter-1-introduction-to-cryptography">Chapter 1: Introduction to Cryptography</h1>
-<h2 id="what-is-cryptography">What is Cryptography?</h2>
-<p>Cryptography is the science of securing communication by transforming information into a format that is unreadable to unauthorized users. It ensures confidentiality, integrity, and authentication in digital communications.</p>
-<h2 id="goals-of-cryptography">Goals of Cryptography</h2>
-<ol>
-<li><strong>Confidentiality</strong> – Ensures that only authorized users can access information.</li>
-<li><strong>Integrity</strong> – Protects data from being altered.</li>
-<li><strong>Authentication</strong> – Verifies the identity of users and devices.</li>
-<li><strong>Non-repudiation</strong> – Prevents denial of actions taken.</li>
-</ol>
-<h2 id="types-of-cryptography">Types of Cryptography</h2>
+<h1 id="chapter-4-hash-functions-and-digital-signatures">Chapter 4: Hash Functions and Digital Signatures</h1>
+<h2 id="what-is-a-hash-function">What is a Hash Function?</h2>
+<p>A hash function takes an input and produces a fixed-length output, called a hash. It is used for data integrity and authentication.</p>
+<h2 id="common-hash-functions">Common Hash Functions</h2>
 <ul>
-<li><strong>Symmetric Encryption</strong> – Uses the same key for encryption and decryption.</li>
-<li><strong>Asymmetric Encryption</strong> – Uses a pair of keys (public and private) for encryption and decryption.</li>
-<li><strong>Hashing</strong> – Generates a fixed-length output that uniquely represents the input data.</li>
+<li><strong>SHA-256 (Secure Hash Algorithm 256-bit)</strong> – Used in Bitcoin and secure authentication.</li>
+<li><strong>MD5 (Message Digest Algorithm 5)</strong> – Fast but insecure due to vulnerabilities.</li>
+<li><strong>SHA-3</strong> – The latest standard in secure hashing.</li>
+</ul>
+<h2 id="example-of-sha-256-hashing">Example of SHA-256 Hashing</h2>
+<pre><code class="language-python">import hashlib
+
+message = b&quot;Hello, World!&quot;
+hash_object = hashlib.sha256(message)
+print(hash_object.hexdigest())
+</code></pre>
+<h2 id="digital-signatures">Digital Signatures</h2>
+<p>Digital signatures use asymmetric encryption to verify the authenticity of messages.
+- <strong>Signing</strong> – The sender encrypts a hash with their private key.
+- <strong>Verification</strong> – The receiver decrypts the hash using the sender’s public key.</p>
+<h2 id="use-cases">Use Cases</h2>
+<ul>
+<li><strong>Document verification</strong></li>
+<li><strong>Software authenticity</strong></li>
+<li><strong>Blockchain transactions</strong></li>
 </ul>
 
 

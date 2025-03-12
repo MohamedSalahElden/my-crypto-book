@@ -16,7 +16,7 @@
     
     
       
-        <title>Chapter 2: Introduction to Cryptography - My Crypto Book</title>
+        <title>Chapter 2: Symmetric Encryption - My Crypto Book</title>
       
     
     
@@ -58,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-2-introduction-to-cryptography" class="md-skip">
+        <a href="#chapter-2-symmetric-encryption" class="md-skip">
           Skip to content
         </a>
       
@@ -92,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 2: Introduction to Cryptography
+              Chapter 2: Symmetric Encryption
             
           </span>
         </div>
@@ -458,8 +458,26 @@
   
 
 
-<h1 id="chapter-2-introduction-to-cryptography">Chapter 2: Introduction to Cryptography</h1>
-<p>Cryptography is the practice of secure communication...</p>
+<h1 id="chapter-2-symmetric-encryption">Chapter 2: Symmetric Encryption</h1>
+<h2 id="what-is-symmetric-encryption">What is Symmetric Encryption?</h2>
+<p>Symmetric encryption uses a single key to encrypt and decrypt data. It is fast and efficient but requires secure key exchange mechanisms.</p>
+<h2 id="common-algorithms">Common Algorithms</h2>
+<ul>
+<li><strong>AES (Advanced Encryption Standard)</strong> – A widely used block cipher.</li>
+<li><strong>DES (Data Encryption Standard)</strong> – Older, now considered insecure.</li>
+<li><strong>Blowfish</strong> – A strong alternative to DES with variable-length keys.</li>
+</ul>
+<h2 id="example-of-aes-encryption">Example of AES Encryption</h2>
+<pre><code class="language-python">from Crypto.Cipher import AES
+import os
+
+key = os.urandom(16)  # Generate a random 16-byte key
+cipher = AES.new(key, AES.MODE_EAX)
+ciphertext, tag = cipher.encrypt_and_digest(b&quot;Secret Message&quot;)
+</code></pre>
+<h2 id="advantages-and-disadvantages">Advantages and Disadvantages</h2>
+<p>✅ Fast and efficient for large data volumes.<br />
+❌ Key distribution can be challenging.</p>
 
 
 

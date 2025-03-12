@@ -9,8 +9,6 @@
       
       
       
-        <link rel="prev" href="..">
-      
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -18,7 +16,7 @@
     
     
       
-        <title>Introduction - My Crypto Book</title>
+        <title>Chapter 3: Asymmetric Encryption - My Crypto Book</title>
       
     
     
@@ -60,7 +58,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-introduction-to-cryptography" class="md-skip">
+        <a href="#chapter-3-asymmetric-encryption" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +92,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Introduction
+              Chapter 3: Asymmetric Encryption
             
           </span>
         </div>
@@ -190,11 +188,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../chapter1/" class="md-tabs__link">
         
   
     
@@ -313,31 +309,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-        
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Introduction
-    
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../chapter1/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -347,53 +322,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-    
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#what-is-cryptography" class="md-nav__link">
-    <span class="md-ellipsis">
-      What is Cryptography?
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#goals-of-cryptography" class="md-nav__link">
-    <span class="md-ellipsis">
-      Goals of Cryptography
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#types-of-cryptography" class="md-nav__link">
-    <span class="md-ellipsis">
-      Types of Cryptography
-    </span>
-  </a>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -530,21 +458,30 @@
   
 
 
-<h1 id="chapter-1-introduction-to-cryptography">Chapter 1: Introduction to Cryptography</h1>
-<h2 id="what-is-cryptography">What is Cryptography?</h2>
-<p>Cryptography is the science of securing communication by transforming information into a format that is unreadable to unauthorized users. It ensures confidentiality, integrity, and authentication in digital communications.</p>
-<h2 id="goals-of-cryptography">Goals of Cryptography</h2>
-<ol>
-<li><strong>Confidentiality</strong> – Ensures that only authorized users can access information.</li>
-<li><strong>Integrity</strong> – Protects data from being altered.</li>
-<li><strong>Authentication</strong> – Verifies the identity of users and devices.</li>
-<li><strong>Non-repudiation</strong> – Prevents denial of actions taken.</li>
-</ol>
-<h2 id="types-of-cryptography">Types of Cryptography</h2>
+<h1 id="chapter-3-asymmetric-encryption">Chapter 3: Asymmetric Encryption</h1>
+<h2 id="what-is-asymmetric-encryption">What is Asymmetric Encryption?</h2>
+<p>Asymmetric encryption uses a pair of keys:
+- <strong>Public Key</strong> – Used for encryption.
+- <strong>Private Key</strong> – Used for decryption.</p>
+<h2 id="common-algorithms">Common Algorithms</h2>
 <ul>
-<li><strong>Symmetric Encryption</strong> – Uses the same key for encryption and decryption.</li>
-<li><strong>Asymmetric Encryption</strong> – Uses a pair of keys (public and private) for encryption and decryption.</li>
-<li><strong>Hashing</strong> – Generates a fixed-length output that uniquely represents the input data.</li>
+<li><strong>RSA (Rivest-Shamir-Adleman)</strong> – A widely used public-key algorithm.</li>
+<li><strong>ECC (Elliptic Curve Cryptography)</strong> – Provides strong security with smaller key sizes.</li>
+<li><strong>Diffie-Hellman</strong> – A method for secure key exchange.</li>
+</ul>
+<h2 id="example-of-rsa-encryption">Example of RSA Encryption</h2>
+<pre><code class="language-python">from Crypto.PublicKey import RSA
+from Crypto.Cipher import PKCS1_OAEP
+
+key = RSA.generate(2048)
+cipher = PKCS1_OAEP.new(key.publickey())
+ciphertext = cipher.encrypt(b&quot;Secret Message&quot;)
+</code></pre>
+<h2 id="use-cases">Use Cases</h2>
+<ul>
+<li><strong>Secure communications (SSL/TLS)</strong></li>
+<li><strong>Digital signatures</strong></li>
+<li><strong>Cryptocurrency transactions</strong></li>
 </ul>
 
 
