@@ -1,17 +1,10 @@
-# Welcome to MkDocs
+# Index
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+Welcome to **My Crypto Book**, a guide to understanding cryptography and its applications. This book covers essential topics such as symmetric and asymmetric encryption, hash functions, and digital signatures.
 
-## Commands
+## Chapters
 
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
+1. [Introduction to Cryptography](#chapter-1-introduction-to-cryptography)
+2. [Symmetric Encryption](#chapter-2-symmetric-encryption)
+3. [Asymmetric Encryption](#chapter-3-asymmetric-encryption)
+4. [Hash Functions and Digital Signatures](#chapter-4-hash-functions-and-digital-signatures)
